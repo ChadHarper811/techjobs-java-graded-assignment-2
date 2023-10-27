@@ -1,6 +1,5 @@
 package org.launchcode.techjobs.oo;
 
-import javax.naming.Name;
 import java.util.Objects;
 
 public class Job {
@@ -31,6 +30,10 @@ public class Job {
 
     // Custom toString, equals, and hashCode methods:
 
+    @Override
+    public String toString() {
+        return System.lineSeparator() + "ID: " + getId() + System.lineSeparator() + "Name: " + getName() + System.lineSeparator() + "Employer: " + getEmployer() + System.lineSeparator() + "Location: " + getLocation() + System.lineSeparator() + "PositionType: " + getPositionType() + System.lineSeparator() + "CoreCompetency: " + getCoreCompetency() + System.lineSeparator();
+    }
 
     @Override
     public boolean equals(Object o) {
