@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Finished first 3 tasks, need to figure out why job equals not working">
+    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Finished first 3 tasks completely starting on task 4 - unit tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/JobTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/JobTest.java" afterDir="false" />
@@ -64,7 +64,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.Tests in 'org.launchcode.techjobs.oo'">
+  <component name="RunManager" selected="JUnit.JobTest">
     <configuration name="Tests in 'org.launchcode.techjobs.oo'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -124,7 +124,7 @@
       </method>
     </configuration>
     <configuration name="org.launchcode.techjobs.oo in techjobs-oo-java17-graded.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="techjobs-oo-java17-graded.main" />
+      <module name="techjobs-oo-java17-graded.test" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.launchcode.techjobs.oo.*" />
@@ -145,9 +145,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.org.launchcode.techjobs.oo in techjobs-oo-java17-graded.main" />
         <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo'" />
         <item itemvalue="Gradle.techjobs-java-graded-assignment-2 [build]" />
-        <item itemvalue="JUnit.org.launchcode.techjobs.oo in techjobs-oo-java17-graded.main" />
       </list>
     </recent_temporary>
   </component>
@@ -168,11 +168,20 @@
       <option name="project" value="LOCAL" />
       <updated>1698109704780</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finished first 3 tasks completely starting on task 4 - unit tests">
+      <option name="closed" value="true" />
+      <created>1698112308765</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698112308765</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished first 3 tasks, need to figure out why job equals not working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished first 3 tasks, need to figure out why job equals not working" />
+    <MESSAGE value="Finished first 3 tasks completely starting on task 4 - unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished first 3 tasks completely starting on task 4 - unit tests" />
   </component>
 </project>

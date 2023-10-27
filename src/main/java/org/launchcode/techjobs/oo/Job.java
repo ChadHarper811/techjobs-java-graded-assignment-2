@@ -29,7 +29,8 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
-    // Custom equals, and hashCode methods:
+    // Custom toString, equals, and hashCode methods:
+
 
     @Override
     public boolean equals(Object o) {
