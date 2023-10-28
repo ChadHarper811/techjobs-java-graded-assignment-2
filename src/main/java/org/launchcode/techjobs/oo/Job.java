@@ -2,6 +2,8 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
+import static java.lang.System.lineSeparator;
+
 public class Job {
 
     private int id;
@@ -21,15 +23,15 @@ public class Job {
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
         this();
-        if (name.trim() == null) {
+        if (name.trim().equals("")) {
             name = "Data not available";
-        } if (employer.getValue().trim() == "") {
+        } if (employer.getValue().trim().equals("")) {
             employer.setValue("Data not available");
-        } if (location.getValue().trim() == "") {
+        } if (location.getValue().trim().equals("")) {
             location.setValue("Data not available");
-        } if (positionType.getValue().trim() == "") {
+        } if (positionType.getValue().trim().equals("")) {
             positionType.setValue("Data not available");
-        } if (coreCompetency.getValue().trim() == "") {
+        } if (coreCompetency.getValue().trim().equals("")) {
             coreCompetency.setValue("Data not available");
         }
         else {
@@ -47,7 +49,7 @@ public class Job {
 
     @Override
     public String toString() {
-        return System.lineSeparator() + "ID: " + getId() + System.lineSeparator() + "Name: " + getName() + System.lineSeparator() + "Employer: " + getEmployer() + System.lineSeparator() + "Location: " + getLocation() + System.lineSeparator() + "PositionType: " + getPositionType() + System.lineSeparator() + "CoreCompetency: " + getCoreCompetency() + System.lineSeparator();
+        return lineSeparator() + "ID: " + getId() + lineSeparator() + "Name: " + getName() + lineSeparator() + "Employer: " + getEmployer() + lineSeparator() + "Location: " + getLocation() + lineSeparator() + "Position Type: " + getPositionType() + lineSeparator() + "Core Competency: " + getCoreCompetency() + lineSeparator();
     }
 
     @Override
