@@ -2,8 +2,6 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-import static java.lang.System.lineSeparator;
-
 public class Job {
 
     private int id;
@@ -56,7 +54,7 @@ public class Job {
     public String toString() {
         if (getName() == null && getEmployer() == null && getLocation() == null && getPositionType() == null && getCoreCompetency() == null) {
             return "OOPS! This job does not seem to exist.";
-        } else {return lineSeparator() + "ID: " + getId() + lineSeparator() + "Name: " + getName() + lineSeparator() + "Employer: " + getEmployer() + lineSeparator() + "Location: " + getLocation() + lineSeparator() + "Position Type: " + getPositionType() + lineSeparator() + "Core Competency: " + getCoreCompetency() + lineSeparator();}
+        } else {return "\nID: " + getId() + "\nName: " + getName() + "\nEmployer: " + getEmployer() + "\nLocation: " + getLocation() + "\nPosition Type: " + getPositionType() + "\nCore Competency: " + getCoreCompetency() + "\n";}
 
     }
 

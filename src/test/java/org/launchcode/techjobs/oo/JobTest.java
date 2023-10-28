@@ -2,7 +2,6 @@ package org.launchcode.techjobs.oo;
 
 import org.junit.jupiter.api.Test;
 
-import static java.lang.System.lineSeparator;
 import static org.testng.Assert.*;
 
 public class JobTest {
@@ -44,15 +43,15 @@ public class JobTest {
     @Test
     public void testToStringStartsAndEndsWithNewLine() {
         Job test_toString = new Job("Name", new Employer("Emp"), new Location("Loc"), new PositionType("Pos"), new CoreCompetency("Core"));
-        assertTrue(test_toString.toString().startsWith(lineSeparator()));
-        assertTrue(test_toString.toString().endsWith(lineSeparator()));
+        assertTrue(test_toString.toString().startsWith("\n"));
+        assertTrue(test_toString.toString().endsWith("\n"));
         Job.jobIdReset();
     }
 
     @Test
     public void testToStringContainsCorrectLabelsAndData() {
         Job test_toString = new Job("Name", new Employer("Emp"), new Location("Loc"), new PositionType("Pos"), new CoreCompetency("Core"));
-        String jobToString = lineSeparator() + "ID: 1" + lineSeparator() + "Name: Name" + lineSeparator() + "Employer: Emp" + lineSeparator() + "Location: Loc" + lineSeparator() + "Position Type: Pos" + lineSeparator() + "Core Competency: Core" + lineSeparator();
+        String jobToString = "\nID: 1" + "\nName: Name" + "\nEmployer: Emp" + "\nLocation: Loc" + "\nPosition Type: Pos" + "\nCore Competency: Core\n";
         assertEquals(test_toString.toString(), jobToString);
         Job.jobIdReset();
     }
@@ -60,7 +59,7 @@ public class JobTest {
     @Test
     public void testToStringHandlesEmptyField() {
         Job test_emptyFieldsToString = new Job("Name", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency("Core"));
-        String jobEmptyFieldsToString = lineSeparator() + "ID: 1" + lineSeparator() + "Name: Name" + lineSeparator() + "Employer: Data not available" + lineSeparator() + "Location: Data not available" + lineSeparator() + "Position Type: Data not available" + lineSeparator() + "Core Competency: Core" + lineSeparator();
+        String jobEmptyFieldsToString = "\nID: 1" + "\nName: Name" + "\nEmployer: Data not available" + "\nLocation: Data not available" + "\nPosition Type: Data not available" + "\nCore Competency: Core\n";
         assertEquals(test_emptyFieldsToString.toString(), jobEmptyFieldsToString);
         Job.jobIdReset();
     }
