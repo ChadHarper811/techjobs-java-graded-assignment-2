@@ -8,13 +8,6 @@ import static org.testng.Assert.*;
 
 public class JobTest {
 
-//    @BeforeEach
-//    public static void testCases() {
-//        Job test_job1 = new Job("name", new Employer("emp"), new Location("loc"), new PositionType("pos"), new CoreCompetency("core"));
-//        Job test_job2 = new Job("name", new Employer("emp"), new Location("loc"), new PositionType("pos"), new CoreCompetency("core"));
-//        Job test_job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-//
-//    }
     @Test
     public void testSettingJobId() {
         Job test_job1 = new Job("name", new Employer("emp"), new Location("loc"), new PositionType("pos"), new CoreCompetency("core"));
@@ -68,4 +61,10 @@ public class JobTest {
         assertEquals(test_emptyFieldsToString.toString(), jobEmptyFieldsToString);
     }
 
+    @Test
+    public void testToStringHandlesAllEmptyFields() {
+        Job test_allEmptyFieldsToString = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+        String jobAllEmptyFieldsToString = "OOPS! This job does not seem to exist.";
+        assertEquals(test_allEmptyFieldsToString.toString(), jobAllEmptyFieldsToString);
+    }
 }

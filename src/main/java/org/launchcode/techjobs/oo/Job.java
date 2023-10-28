@@ -23,15 +23,15 @@ public class Job {
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
         this();
-        if (name.trim().equals("")) {
+        if (name.trim().isEmpty()) {
             name = "Data not available";
-        } if (employer.getValue().trim().equals("")) {
+        } if (employer.getValue().trim().isEmpty()) {
             employer.setValue("Data not available");
-        } if (location.getValue().trim().equals("")) {
+        } if (location.getValue().trim().isEmpty()) {
             location.setValue("Data not available");
-        } if (positionType.getValue().trim().equals("")) {
+        } if (positionType.getValue().trim().isEmpty()) {
             positionType.setValue("Data not available");
-        } if (coreCompetency.getValue().trim().equals("")) {
+        } if (coreCompetency.getValue().trim().isEmpty()) {
             coreCompetency.setValue("Data not available");
         }
         else {
@@ -49,7 +49,10 @@ public class Job {
 
     @Override
     public String toString() {
-        return lineSeparator() + "ID: " + getId() + lineSeparator() + "Name: " + getName() + lineSeparator() + "Employer: " + getEmployer() + lineSeparator() + "Location: " + getLocation() + lineSeparator() + "Position Type: " + getPositionType() + lineSeparator() + "Core Competency: " + getCoreCompetency() + lineSeparator();
+        if (getName() == null && getEmployer() == null && getLocation() == null && getPositionType() == null && getCoreCompetency() == null) {
+            return "OOPS! This job does not seem to exist.";
+        } else {return lineSeparator() + "ID: " + getId() + lineSeparator() + "Name: " + getName() + lineSeparator() + "Employer: " + getEmployer() + lineSeparator() + "Location: " + getLocation() + lineSeparator() + "Position Type: " + getPositionType() + lineSeparator() + "Core Competency: " + getCoreCompetency() + lineSeparator();}
+
     }
 
     @Override
