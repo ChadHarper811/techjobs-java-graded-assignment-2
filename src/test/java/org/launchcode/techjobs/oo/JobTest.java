@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static java.lang.System.lineSeparator;
 import static org.testng.Assert.*;
 
-
 public class JobTest {
 
     @Test
