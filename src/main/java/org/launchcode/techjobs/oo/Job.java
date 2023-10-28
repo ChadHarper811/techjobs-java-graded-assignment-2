@@ -21,11 +21,26 @@ public class Job {
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
         this();
-        this.name = name;
-        this.employer = employer;
-        this.location = location;
-        this.positionType = positionType;
-        this.coreCompetency = coreCompetency;
+        if (name.trim() == null) {
+            name = "Data not available";
+        } if (employer.getValue().trim() == "") {
+            employer.setValue("Data not available");
+        } if (location.getValue().trim() == "") {
+            location.setValue("Data not available");
+        } if (positionType.getValue().trim() == "") {
+            positionType.setValue("Data not available");
+        } if (coreCompetency.getValue().trim() == "") {
+            coreCompetency.setValue("Data not available");
+        }
+        else {
+            this.name = name;
+            this.employer = employer;
+            this.location = location;
+            this.positionType = positionType;
+            this.coreCompetency = coreCompetency;
+        };
+
+
     }
 
     // Custom toString, equals, and hashCode methods:

@@ -59,4 +59,12 @@ public class JobTest {
         String jobToString = System.lineSeparator() + "ID: 1" + System.lineSeparator() + "Name: Name" + System.lineSeparator() + "Employer: Emp" + System.lineSeparator() + "Location: Loc" + System.lineSeparator() + "PositionType: Pos" + System.lineSeparator() + "CoreCompetency: Core" + System.lineSeparator();
         assertEquals(test_toString.toString(), jobToString);
     }
+
+    @Test
+    public void testToStringHandlesEmptyField() {
+        Job test_emptyFieldsToString = new Job("Name", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency("Core"));
+        String jobEmptyFieldsToString = System.lineSeparator() + "ID: 1" + System.lineSeparator() + "Name: Name" + System.lineSeparator() + "Employer: Data not available" + System.lineSeparator() + "Location: Data not available" + System.lineSeparator() + "PositionType: Data not available" + System.lineSeparator() + "CoreCompetency: Core" + System.lineSeparator();
+        assertEquals(test_emptyFieldsToString.toString(), jobEmptyFieldsToString);
+    }
+
 }
