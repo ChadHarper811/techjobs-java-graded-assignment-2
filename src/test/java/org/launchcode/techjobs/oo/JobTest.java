@@ -12,6 +12,7 @@ public class JobTest {
         Job test_job1 = new Job("name", new Employer("emp"), new Location("loc"), new PositionType("pos"), new CoreCompetency("core"));
         Job test_job2 = new Job("name", new Employer("emp"), new Location("loc"), new PositionType("pos"), new CoreCompetency("core"));
         assertNotEquals(test_job1, test_job2);
+        Job.jobIdReset();
     }
 
     @Test
@@ -27,7 +28,7 @@ public class JobTest {
         assertEquals("Desert", test_job.getLocation().getValue());
         assertEquals("Quality control", test_job.getPositionType().getValue());
         assertEquals("Persistence", test_job.getCoreCompetency().getValue());
-
+        Job.jobIdReset();
     }
 
     @Test
@@ -35,6 +36,7 @@ public class JobTest {
         Job test_job1 = new Job("a", new Employer("b"), new Location("c"), new PositionType("d"), new CoreCompetency("e"));
         Job test_job2 = new Job("a", new Employer("b"), new Location("c"), new PositionType("d"), new CoreCompetency("e"));
         assertNotSame(test_job1, test_job2);
+        Job.jobIdReset();
     }
 
 
@@ -44,6 +46,7 @@ public class JobTest {
         Job test_toString = new Job("Name", new Employer("Emp"), new Location("Loc"), new PositionType("Pos"), new CoreCompetency("Core"));
         assertTrue(test_toString.toString().startsWith(lineSeparator()));
         assertTrue(test_toString.toString().endsWith(lineSeparator()));
+        Job.jobIdReset();
     }
 
     @Test
@@ -51,6 +54,7 @@ public class JobTest {
         Job test_toString = new Job("Name", new Employer("Emp"), new Location("Loc"), new PositionType("Pos"), new CoreCompetency("Core"));
         String jobToString = lineSeparator() + "ID: 1" + lineSeparator() + "Name: Name" + lineSeparator() + "Employer: Emp" + lineSeparator() + "Location: Loc" + lineSeparator() + "Position Type: Pos" + lineSeparator() + "Core Competency: Core" + lineSeparator();
         assertEquals(test_toString.toString(), jobToString);
+        Job.jobIdReset();
     }
 
     @Test
@@ -58,6 +62,7 @@ public class JobTest {
         Job test_emptyFieldsToString = new Job("Name", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency("Core"));
         String jobEmptyFieldsToString = lineSeparator() + "ID: 1" + lineSeparator() + "Name: Name" + lineSeparator() + "Employer: Data not available" + lineSeparator() + "Location: Data not available" + lineSeparator() + "Position Type: Data not available" + lineSeparator() + "Core Competency: Core" + lineSeparator();
         assertEquals(test_emptyFieldsToString.toString(), jobEmptyFieldsToString);
+        Job.jobIdReset();
     }
 
     @Test
@@ -65,5 +70,6 @@ public class JobTest {
         Job test_allEmptyFieldsToString = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
         String jobAllEmptyFieldsToString = "OOPS! This job does not seem to exist.";
         assertEquals(test_allEmptyFieldsToString.toString(), jobAllEmptyFieldsToString);
+        Job.jobIdReset();
     }
 }

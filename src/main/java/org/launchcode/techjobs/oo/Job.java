@@ -45,6 +45,11 @@ public class Job {
 
     }
 
+//    Custom method for unit-testing to reset ID after each test
+    static void jobIdReset() {
+        nextId = 1;
+    }
+
     // Custom toString, equals, and hashCode methods:
 
     @Override
